@@ -17,10 +17,10 @@ code {
 ul.reset,
 ul.reset li,
 ul.reset ul li {
-   margin:0;
-   padding: 0;
-   text-indent: 0;
-   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
 }
 
 .chat-gates {
@@ -142,6 +142,8 @@ ul.reset ul li {
 
 .send {
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .send__input {
@@ -150,4 +152,37 @@ ul.reset ul li {
 
 .send__button {
   margin-right: 0;
+}
+
+.emoji-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.emoji-button:hover {
+  background-color: #e0e0e0;
+}
+
+.picker {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.picker-wrapper {
+  position: absolute;
+  bottom: 25%;
+  left: 75%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
